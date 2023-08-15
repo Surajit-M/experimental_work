@@ -1,0 +1,113 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for test_dev_project:test_dev_project:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.systemPath' for com.oracle:ojdbc:jar should use a variable instead of a hard-coded path D:/IT/java_practice/jar_files/ojdbc-7.jar @ line 17, column 16
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 102, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] [1m-----------------< [0;36mtest_dev_project:test_dev_project[0;1m >------------------[m
+[INFO] [1mBuilding test_dev_project 0.0.1-SNAPSHOT[m
+[INFO]   from pom.xml
+[INFO] [1m--------------------------------[ jar ]---------------------------------[m
+[INFO] 
+[INFO] [1m--- [0;32mclean:3.2.0:clean[m [1m(default-clean)[m @ [36mtest_dev_project[0;1m ---[m
+[INFO] Deleting D:\IT\java_practice\framework_build_project\test_dev_project\target
+[INFO] 
+[INFO] [1m--- [0;32mresources:3.3.0:resources[m [1m(default-resources)[m @ [36mtest_dev_project[0;1m ---[m
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] [1m--- [0;32mcompiler:3.10.1:compile[m [1m(default-compile)[m @ [36mtest_dev_project[0;1m ---[m
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] [1m--- [0;32mresources:3.3.0:testResources[m [1m(default-testResources)[m @ [36mtest_dev_project[0;1m ---[m
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] [1m--- [0;32mcompiler:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mtest_dev_project[0;1m ---[m
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to D:\IT\java_practice\framework_build_project\test_dev_project\target\test-classes
+[INFO] /D:/IT/java_practice/framework_build_project/test_dev_project/src/test/java/auto_runner/cucumber_runner.java: D:\IT\java_practice\framework_build_project\test_dev_project\src\test\java\auto_runner\cucumber_runner.java uses or overrides a deprecated API.
+[INFO] /D:/IT/java_practice/framework_build_project/test_dev_project/src/test/java/auto_runner/cucumber_runner.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] [1m--- [0;32msurefire:3.1.2:test[m [1m(default-test)[m @ [36mtest_dev_project[0;1m ---[m
+[INFO] Using auto detected provider org.apache.maven.surefire.testng.TestNGProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running [1mTestSuite[m
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+Runner is not null: dataprovider
+Inside create_driver --->
+Aug 11, 2023 9:40:04 PM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+Aug 11, 2023 9:40:05 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 115, so returning the closest version found: 114
+create_driver completed --->
+[ERROR] [1;31mTests [0;1mrun: [0;1m1[m, [1;31mFailures: [0;1;31m1[m, Errors: 0, Skipped: 0, Time elapsed: 7.149 s[1;31m <<< FAILURE![m -- in [1mTestSuite[m
+[ERROR] auto_runner.cucumber_runner.scenario["Title of your scenario outline", "Title of your feature"](1) -- Time elapsed: 6.241 s <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at glue_code.selenium_gluecode.user_is_preparing_to_test(selenium_gluecode.java:35)
+	at ✽.User is preparing to test "test_1"(file:///D:/IT/java_practice/framework_build_project/test_dev_project/src/test/java/features/test_feature.feature:6)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] [1;31mFailures: [m
+[ERROR] [1;31m  cucumber_runner.scenario expected [true] but found [false][m
+[INFO] 
+[ERROR] [1;31mTests run: 1, Failures: 1, Errors: 0, Skipped: 0[m
+[INFO] 
+[ERROR] There are test failures.
+
+Please refer to D:\IT\java_practice\framework_build_project\test_dev_project\target\surefire-reports for the individual test results.
+Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[INFO] 
+[INFO] [1m--- [0;32mresources:3.3.0:resources[m [1m(default-resources)[m @ [36mtest_dev_project[0;1m ---[m
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] [1m--- [0;32mcompiler:3.10.1:compile[m [1m(default-compile)[m @ [36mtest_dev_project[0;1m ---[m
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] [1m--- [0;32mresources:3.3.0:testResources[m [1m(default-testResources)[m @ [36mtest_dev_project[0;1m ---[m
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] [1m--- [0;32mcompiler:3.10.1:testCompile[m [1m(default-testCompile)[m @ [36mtest_dev_project[0;1m ---[m
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to D:\IT\java_practice\framework_build_project\test_dev_project\target\test-classes
+[INFO] /D:/IT/java_practice/framework_build_project/test_dev_project/src/test/java/auto_runner/cucumber_runner.java: D:\IT\java_practice\framework_build_project\test_dev_project\src\test\java\auto_runner\cucumber_runner.java uses or overrides a deprecated API.
+[INFO] /D:/IT/java_practice/framework_build_project/test_dev_project/src/test/java/auto_runner/cucumber_runner.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] [1m--- [0;32msurefire:3.1.2:test[m [1m(default-test)[m @ [36mtest_dev_project[0;1m ---[m
+[INFO] Skipping execution of surefire because it has already been run for this configuration
+[INFO] 
+[INFO] [1m--- [0;32mjar:3.3.0:jar[m [1m(default-jar)[m @ [36mtest_dev_project[0;1m ---[m
+[INFO] Building jar: D:\IT\java_practice\framework_build_project\test_dev_project\target\test_project.jar
+[INFO] 
+[INFO] [1m--- [0;32mcucumber-reporting:5.7.5:generate[m [1m(execution)[m @ [36mtest_dev_project[0;1m ---[m
+[INFO] About to generate Cucumber report.
+Aug 11, 2023 9:40:12 PM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFO: File 'D:\IT\java_practice\framework_build_project\test_dev_project\Results\cucumber_json\cucumber.json' contains 1 feature(s)
+[INFO] [1m------------------------------------------------------------------------[m
+[INFO] [1;31mBUILD FAILURE[m
+[INFO] [1m------------------------------------------------------------------------[m
+[INFO] Total time:  13.051 s
+[INFO] Finished at: 2023-08-11T21:40:13+05:30
+[INFO] [1m------------------------------------------------------------------------[m
+[ERROR] Failed to execute goal [32mnet.masterthought:maven-cucumber-reporting:5.7.5:generate[m [1m(execution)[m on project [36mtest_dev_project[m: [1;31mError Found:[m: BUILD FAILED - Check Report For Details -> [1m[Help 1][m
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[ERROR] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

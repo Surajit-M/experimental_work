@@ -1,6 +1,7 @@
 auto_runner\cucumber_runner.class
 page_validation\Home_Page.class
 rough\roughwork.class
+utilities\Get_data_from_Excel.class
 utilities\Oracle_db.class
 glue_code\selenium_gluecode.class
 page_validation\base_class.class

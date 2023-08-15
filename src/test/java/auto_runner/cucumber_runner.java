@@ -46,6 +46,17 @@ public class cucumber_runner {
 		}
 	}
 	
+	@AfterSuite(alwaysRun = true)
+	public void terminate_driver() throws Throwable{
+		try {
+			Process p = Runtime.getRuntime().exec("taskkill /im chromedriver.exe -f");
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
 	
 
 }

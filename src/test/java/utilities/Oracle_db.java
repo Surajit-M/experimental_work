@@ -16,15 +16,28 @@ public class Oracle_db {
 		
 		ResultSet rs = null;
 		try {
-			String conn_url = "jdbc:oracle:thin:@" + hostname + ":" + port + ":" + service_name;
-			System.out.println("conn_url = " + conn_url);
-			Connection conn = DriverManager.getConnection(conn_url, username, password);
-			System.out.println("Connection Successful!");
-			PreparedStatement ps = conn.prepareStatement(sql_query);
-			rs = ps.executeQuery();
-			System.out.println("Query Execution Successful!");
-			result_data = resultset_to_hashmap(rs);
-			System.out.println("result_data = \n" + result_data);
+//			String conn_url = "jdbc:oracle:thin:@" + hostname + ":" + port + ":" + service_name;
+//			System.out.println("conn_url = " + conn_url);
+//			Connection conn = DriverManager.getConnection(conn_url, username, password);
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+            
+            // Establishing Connection
+            Connection con = DriverManager.getConnection(
+             "jdbc:oracle:thin:@localhost:1522:orcl", "SYSTEM", "pdbadmin");
+ 
+            if (con != null)            
+                System.out.println("Connected");           
+            else           
+                System.out.println("Not Connected");
+
+			
+			
+//			System.out.println("Connection Successful!");
+//			PreparedStatement ps = conn.prepareStatement(sql_query);
+//			rs = ps.executeQuery();
+//			System.out.println("Query Execution Successful!");
+//			result_data = resultset_to_hashmap(rs);
+//			System.out.println("result_data = \n" + result_data);
 		} 
 		catch (Exception e) {
 			e.printStackTrace();
