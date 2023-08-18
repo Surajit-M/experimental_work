@@ -13,7 +13,7 @@ public class Read_config {
 		Properties props = new Properties();
 		InputStream input = null;
 		try {
-			input = new FileInputStream(System.getProperty("user.dir") + "/Configuration/config_file.properties");
+			input = new FileInputStream(System.getProperty("user.dir") + "/Configuration/config.properties");
 			props.load(input);
 			res = props.getProperty(config_key);
 		}

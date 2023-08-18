@@ -8,7 +8,6 @@ import org.testng.Assert;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.*;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import page_validation.Home_Page;
 import page_validation.base_class;
 import utilities.Driver_manager;
