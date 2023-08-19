@@ -1,10 +1,15 @@
 package utilities;
 
 import java.io.*;
+import java.util.List;
 
 import org.apache.poi.ss.formula.functions.Rows;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import tech.tablesaw.api.Table;
+import tech.tablesaw.io.xlsx.XlsxReadOptions;
+import tech.tablesaw.io.xlsx.XlsxReader;
 import utilities.*;
 
 public class Get_data_from_Excel {
@@ -44,8 +49,40 @@ public class Get_data_from_Excel {
 		return result_val;
 	}
 	
+	public static String fetch_val(String filepath, String sheet_name, String row_name, String col_name)throws Throwable{
+		String res_val = "";
+		try {
+			XlsxReadOptions options = XlsxReadOptions.builder(filepath).build();
+			XlsxReader xlsxReader = new XlsxReader();
+			List<Table> tables=  xlsxReader.readMultiple(options);
+			Table test_data_table = null;
+			for(int i = 0; i < tables.size(); i++) {
+				if(tables.get(i).name().toString().contains(sheet_name)) {
+					test_data_table = tables.get(i);
+					break;
+				}
+			}
+			for(int i = 0; i < test_data_table.rowCount(); i++) {
+				if(test_data_table.get(i, 0).toString().equalsIgnoreCase(row_name)) {
+					res_val = test_data_table.getString(i, col_name);
+					break;
+				}
+			}
+			System.out.println("Value from [" + filepath.split("/")[filepath.split("/").length - 1] + 
+					"][" + sheet_name + "][" +row_name + "][" + col_name + "] = <---" + res_val + "--->");
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return res_val;
+	}
+	
 	public static void main(String[] args) throws Throwable {
-		get_val("test_1", "processor");
+//		get_val("test_1", "processor");
+		String file_path = (System.getProperty("user.dir") + Read_config.get_from_config("test_data_path"));
+		System.out.println("file_path = " + file_path);
+		fetch_val(System.getProperty("user.dir") + Read_config.get_from_config("test_data_path"), 
+				Read_config.get_from_config("test_sheet_name"), "test_1", "product_name");
 	}
 
 }
