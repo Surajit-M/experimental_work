@@ -22,12 +22,13 @@
 			<systemPath>D:/IT/java_practice/jar_files/ojdbc-7.jar</systemPath>
 		</dependency>
 
-		<!--https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.10.0</version>
+			<version>3.141.59</version>
 		</dependency>
+
 
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
 		<dependency>

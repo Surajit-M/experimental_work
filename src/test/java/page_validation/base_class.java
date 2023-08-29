@@ -1,10 +1,10 @@
 package page_validation;
 
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeTest;
-import org.openqa.selenium.TakesScreenshot;
 
 import io.cucumber.java.Scenario;
 
