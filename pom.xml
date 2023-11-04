@@ -13,14 +13,15 @@
 		<!-- https://mvnrepository.com/artifact/com.zavtech/morpheus-core -->
 
 
-		<!-- https://mvnrepository.com/artifact/com.oracle/ojdbc -->
+		<!-- https://mvnrepository.com/artifact/com.oracle/ojdbc 
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc</artifactId>
 			<version>7</version>
 			<scope>system</scope>
-			<systemPath>D:/IT/java_practice/jar_files/ojdbc-7.jar</systemPath>
+			<systemPath>/home/sayan/Java_practice/ScratchWorks/ojdbc-7.jar</systemPath>
 		</dependency>
+		-->
 
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
@@ -93,13 +94,7 @@
 			<version>0.43.1</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/tech.tablesaw/tablesaw-core -->
-		<dependency>
-			<groupId>tech.tablesaw</groupId>
-			<artifactId>tablesaw-core</artifactId>
-			<version>0.43.1</version>
-		</dependency>
-
+		
 		<!-- https://mvnrepository.com/artifact/tech.tablesaw/tablesaw-excel -->
 		<dependency>
 			<groupId>tech.tablesaw</groupId>
@@ -115,7 +110,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.release>19</maven.compiler.release>
+		<maven.compiler.release>11</maven.compiler.release>
 		<maven.build.timestamp.format>ddMMhhmm</maven.build.timestamp.format>
 	</properties>
 	<build>
@@ -125,8 +120,8 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>19</source>
-					<target>19</target>
+					<source>11</source>
+					<target>11</target>
 				</configuration>
 			</plugin>
 			<plugin>

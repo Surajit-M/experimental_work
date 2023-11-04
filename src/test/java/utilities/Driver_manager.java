@@ -12,7 +12,7 @@ public class Driver_manager extends base_class{
 		System.out.println("Inside create_driver --->");
 		try {
 			if(browser_name.equalsIgnoreCase("chrome")) {
-				System.setProperty("webdriver.chrome.driver", "D:/IT/java_practice/framework_build_project/test_dev_project/chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver");
 				ChromeOptions chrome_options = new ChromeOptions();
 //				chrome_options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
 				driver = new ChromeDriver(chrome_options);
